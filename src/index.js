@@ -29,9 +29,7 @@ class Sorter {
             arr.push(this.arr[indices[i]]);
         }
         arr.sort(this.compareFunction);
-        indices.sort(function (x, y) {
-            return x - y
-        });
+        indices.sort(this.DefaultComparator);
         for (i = 0; i < indices.length; i++) {
             this.arr[indices[i]] = arr[i];
         }
